@@ -1,6 +1,9 @@
 {
-  "name": "krowinski/bcmath-extended",
-  "description": "Extends php BCMath lib for missing functions like floor, ceil, round, abs, min, max, rand for big numbers. Also wraps existing BCMath functions. (more http://php.net/manual/en/book.bc.php) Supports scientific notations",
+  "name": "gammadia/bcmath-extended-nullable",
+  "description": "Fork of krowinski/bcmath-extended with added nullable input arguments",
+  "replace": {
+    "krowinski/bcmath-extended": "^6.0"
+  },
   "keywords": [
     "bc",
     "bcmath",
