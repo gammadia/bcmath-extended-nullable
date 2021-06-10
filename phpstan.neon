@@ -1,6 +1,13 @@
+includes:
+    - 'vendor/phpstan/phpstan/conf/bleedingEdge.neon'
+
 parameters:
     level: max
-    checkMissingIterableValueType: false
+    tmpDir: 'var/cache/phpstan'
     paths:
-        - src
-        - tests
+        - 'src'
+        - 'tests'
+    reportUnmatchedIgnoredErrors: true
+    checkFunctionNameCase: true
+    checkUninitializedProperties: true
+    tipsOfTheDay: false

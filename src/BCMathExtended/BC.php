@@ -335,12 +335,18 @@ class BC
         return $max;
     }
 
+    /**
+     * @param array<int, array<int, string|float|int|null>|string|float|int|null> $values
+     *
+     * @return array<int, string|float|int|null>
+     */
     protected static function parseValues(array $values): array
     {
         if (is_array($values[0])) {
             $values = $values[0];
         }
 
+        /** @var array<int, string|float|int|null> $values */
         return $values;
     }
 

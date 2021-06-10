@@ -1,67 +1,15 @@
-# bcmath-extended
-[![Build Status](https://travis-ci.org/krowinski/bcmath-extended.svg?branch=master)](https://travis-ci.org/krowinski/bcmath-extended)
-[![Code Coverage](https://scrutinizer-ci.com/g/krowinski/bcmath-extended/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/krowinski/bcmath-extended/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/krowinski/bcmath-extended/v/stable)](https://packagist.org/packages/krowinski/bcmath-extended) 
-[![Total Downloads](https://poser.pugx.org/krowinski/bcmath-extended/downloads)](https://packagist.org/packages/krowinski/bcmath-extended) 
-[![Latest Unstable Version](https://poser.pugx.org/krowinski/bcmath-extended/v/unstable)](https://packagist.org/packages/krowinski/bcmath-extended) 
-[![License](https://poser.pugx.org/krowinski/bcmath-extended/license)](https://packagist.org/packages/krowinski/bcmath-extended)
+BCMath Extended
+==========
 
-Extends php BCMath lib for missing functions like floor, ceil, round, abs, min, max, rand for big numbers.
-Also wraps existing BCMath functions. (more http://php.net/manual/en/book.bc.php)
+Learn more about it in its [documentation](https://github.com/krowinski/bcmath-extended).
 
-Installation
-===
+A fork to allow nullable input arguments [![CI](https://github.com/gammadia/bcmath-extended-nullable/actions/workflows/ci.yaml/badge.svg)](https://github.com/gammadia/bcmath-extended-nullable/actions/workflows/ci.yaml)
+==========
 
-```sh
-composer require krowinski/bcmath-extended
-```
+This is a fork of `krowinski/bcmath-extended` adapted to allow nullable input arguments, which supports :
 
-Features
-===
-- config
-    - setTrimTrailingZeroes - disable|enable trailing zeros (default trimming is enabled)  
-- new tool methods
-    - convertScientificNotationToString - converts scientific notation to string
-    - getScale - gets current global scale 
-    - getDecimalsLengthFromNumber - gets amount of decimals 
-    - hexdec - converting from hexadecimal to decimal
-    - dechex - converting from decimal to hexadecimal
-    - bin2dec - converting from binary to decimal
-    - dec2bin - converting from decimal to binary
-- new math functions 
-    - round
-    - abs 
-    - rand
-    - max
-    - min
-    - roundDown
-    - roundUp
-    - roundHalfEven
-    - ceil
-    - exp
-    - log
-    - fact
-    - pow (supports fractional)
-    - mod (supports fractional + scale in php 5.6 <)
-    - bitwise operators
-        - bitXor
-        - bitOr
-        - bitAnd
-- proxy for original functions (http://php.net/manual/en/book.bc.php)
-- all functions supports scientific notation
-- all functions are static, so it can be easy replaced by this lib
+* PHP `7.1` <-> `8.0`
 
-Info
-===
-As of 7.2 float can be passed to bcmod but they don't return correct values (IMO)
+The following changes were applied to the dev dependencies :
 
-I created bug for this in https://bugs.php.net/bug.php?id=76287 but it was commented as documentation issue not a bug.
-
-```
-bcmod() doesn't use floor() but rather truncates towards zero,
-which is also defined this way for POSIX fmod(), so that the
-result always has the same sign as the dividend.  Therefore, this
-is not a bug, but rather a documentation issue.
-```
-
-But I still will use floor not truncated for mod in this lib.
+* PHPStan baseline added to keep the code in good health

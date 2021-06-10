@@ -10,6 +10,9 @@ use PHPUnit\Framework\TestCase;
 
 class BCTest extends TestCase
 {
+    /**
+     * @return mixed[]
+     */
     public function scientificNotationProvider(): array
     {
         return [
@@ -89,6 +92,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::convertScientificNotationToString($number));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function ceilProvider(): array
     {
         return [
@@ -129,6 +135,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::ceil($number));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function floorProvider(): array
     {
         return [
@@ -176,6 +185,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::floor($number));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function absProvider(): array
     {
         return [
@@ -210,6 +222,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::abs($number));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function roundProvider(): array
     {
         return [
@@ -279,6 +294,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::round($number, $precision));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function roundHalfEvenProvider(): array
     {
         return [
@@ -319,6 +337,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::roundHalfEven($number, $precision));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function randProvider(): array
     {
         return [
@@ -384,7 +405,9 @@ class BCTest extends TestCase
         self::assertSame('-0.00056', BC::min(9.9999E-10, -5.6E-4));
     }
 
-
+    /**
+     * @return mixed[]
+     */
     public function setScaleProvider(): array
     {
         return [
@@ -405,6 +428,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::add($left, $right));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function roundUpProvider(): array
     {
         return [
@@ -438,6 +464,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::roundUp($number, $precision));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function roundDownProvider(): array
     {
         return [
@@ -471,6 +500,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::roundDown($number, $precision));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function addProvider(): array
     {
         return [
@@ -524,6 +556,9 @@ class BCTest extends TestCase
         self::assertSame('-1.5', BC::sub('1', '2.5'));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function subProvider(): array
     {
         return [
@@ -549,6 +584,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::sub($left, $right, $scale));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function compProvider(): array
     {
         return [
@@ -581,6 +619,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::comp($left, $right, $scale));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function getScaleProvider(): array
     {
         return [
@@ -601,6 +642,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::getScale());
     }
 
+    /**
+     * @return mixed[]
+     */
     public function divProvider(): array
     {
         return [
@@ -621,6 +665,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::div($left, $right, $scale));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function throwDivByZeroProvider(): array
     {
         return [
@@ -653,6 +700,9 @@ class BCTest extends TestCase
         self::assertSame('0.5', BC::div('1', '2'));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function modProvider(): array
     {
         return [
@@ -691,6 +741,9 @@ class BCTest extends TestCase
         BC::mod('1', $divisor);
     }
 
+    /**
+     * @return mixed[]
+     */
     public function mulProvider(): array
     {
         return [
@@ -724,7 +777,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::mul($leftOperand, $rightOperand, $scale));
     }
 
-
+    /**
+     * @return mixed[]
+     */
     public function powProvider(): array
     {
         return [
@@ -763,6 +818,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::pow($left, $right, $scale));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function logProvider(): array
     {
         return [
@@ -802,6 +860,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::log($value));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function expProvider(): array
     {
         return [
@@ -841,6 +902,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::exp($arg));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function factProvider(): array
     {
         return [
@@ -900,6 +964,9 @@ class BCTest extends TestCase
         self::assertSame('74.08', BC::pow('4.2', '3'));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function powModProvider(): array
     {
         return [
@@ -940,6 +1007,9 @@ class BCTest extends TestCase
         BC::powMod('1', '2', $divisor);
     }
 
+    /**
+     * @return mixed[]
+     */
     public function sqrtProvider(): array
     {
         return [
@@ -973,6 +1043,9 @@ class BCTest extends TestCase
         self::assertSame('3.07', BC::sqrt('9.444'));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function hexdecProvider(): array
     {
         return [
@@ -994,6 +1067,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::hexdec($operand));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function dechexProvider(): array
     {
         return [
@@ -1025,6 +1101,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::bitAnd($left, $right));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function shouldBitAddProvider(): array
     {
         return [
@@ -1057,6 +1136,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::bitOr($left, $right));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function shouldBitOrProvider(): array
     {
         return [
@@ -1091,6 +1173,9 @@ class BCTest extends TestCase
         self::assertSame($expected, BC::bitXor($left, $right));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function shouldBitXorProvider(): array
     {
         return [
@@ -1189,6 +1274,9 @@ class BCTest extends TestCase
         self::assertSame($decoded, BC::dec2bin($expected));
     }
 
+    /**
+     * @return mixed[]
+     */
     public function shouldConvertBinaryProvider(): array
     {
         return [
