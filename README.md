@@ -8,8 +8,8 @@ A fork to allow nullable input arguments [![CI](https://github.com/gammadia/bcma
 
 This is a fork of `krowinski/bcmath-extended` adapted to allow nullable input arguments, which supports :
 
-* PHP `7.1` <-> `8.0`
+* PHP `7.2` <-> `8.1`
 
 The following changes were applied to the dev dependencies :
 
-* PHPStan baseline added to keep the code in good health
+* Installing PHPStan to keep the code in good health
